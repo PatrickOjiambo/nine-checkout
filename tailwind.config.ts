@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export default {
     darkMode: ["class"],
@@ -58,5 +59,6 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), new MiniCssExtractPlugin(),
+  ],
 } satisfies Config;
